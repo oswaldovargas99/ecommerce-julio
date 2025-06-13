@@ -60,6 +60,8 @@ x-data="{
 
 
     @livewireScripts
+
+    @stack('js')
 </body>
 
 </html>
