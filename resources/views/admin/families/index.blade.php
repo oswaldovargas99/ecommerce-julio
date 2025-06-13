@@ -1,5 +1,9 @@
 <x-admin-layout>
-
+    <x-slot name="action">
+        <button class="btn btn-blue">
+            Nueva
+        </button>
+    </x-slot>
     @if ($families->count())
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -46,9 +50,8 @@
             </svg>
             <span class="sr-only">Info</span>
             <div>
-                <span class="font-medium">Info alert!</span> Falta registtrar familias
+                <span class="font-medium">Alerta!</span> Falta registrar familias
             </div>
         </div>
     @endif
-
 </x-admin-layout>
