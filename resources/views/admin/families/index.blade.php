@@ -1,8 +1,8 @@
 <x-admin-layout>
     <x-slot name="action">
-        <button class="btn btn-blue">
+        <a class="btn btn-blue" href="{{route('admin.families.create')}}">
             Nueva
-        </button>
+        </a>
     </x-slot>
     @if ($families->count())
         <div class="relative overflow-x-auto">
