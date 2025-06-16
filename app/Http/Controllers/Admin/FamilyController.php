@@ -85,9 +85,24 @@ class FamilyController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(Family $family)
-    {
-        $family->delete();
-        return redirect()->route('admin.families.index');
+    {   
+        if($family->categories()->count() > 0){
+            session()->flash('swal',[
+                'icon'=>'error',
+                'title'=>'¡Ups!',
+                'text'=> 'No se puede eliminar la familia porque tiene categorías asociadas'
+            ]);
+            return redirect()->route('admin.families.edit', $family);
+        }
 
+
+        $family->delete();
+
+            session()->flash('swal',[
+                'icon'=>'succes',
+                'title'=>'¡Bien hecho!',
+                'text'=> 'Familia eliminada correctamente'
+            ]);
+            return redirect()->route('admin.families.index');
     }
 }
