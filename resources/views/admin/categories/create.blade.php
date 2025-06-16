@@ -7,7 +7,9 @@
                 <x-label class="mb-2">Familia</x-label>
                 <x-select name="family_id">
                     @foreach ($families as $family)
-                        <option value="{{ $family->id }}">{{ $family->name }}</option>
+                        <option value="{{ $family->id }}"
+                            @selected(old('family_id') == $family->id)>
+                            {{ $family->name }}</option>
                     @endforeach
                 </x-select>
             </div>
