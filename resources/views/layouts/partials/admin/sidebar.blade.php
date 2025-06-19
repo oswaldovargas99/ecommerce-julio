@@ -14,9 +14,15 @@
         ],
         [
             'name'=>'Categorías',
-            'icon'=>'fa-solid fa-box-open',
+            'icon'=>'fa-solid fa-tags',
             'route'=> route('admin.categories.index'),
             'active'=> request()->routeIs('admin.categories.*')
+        ],
+                [
+            'name'=>'Subcategorías',
+            'icon'=>'fa-solid fa-tag',
+            'route'=> route('admin.subcategories.index'),
+            'active'=> request()->routeIs('admin.subcategories.*')
         ],
 
 ];
