@@ -14,7 +14,7 @@
             </div>
             <div class="mt-2 flex justify-end space-x-2">
                 <x-danger-button onclick="confirmDelete()">Eliminar</x-danger-button>
-                <x-button>Actualizar</x-button>
+                <x-button class="ml-2">Actualizar</x-button>
             </div>
         </form>
     </div>
